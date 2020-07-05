@@ -14,6 +14,11 @@ We have also [released a dataset](https://github.com/openai/gpt-2-output-dataset
 
 This repository is meant to be a starting point for researchers and engineers to experiment with GPT-2.
 
+To generate text using the guided (you provide the original context) recursive (the generated text is fed back to generate the next sample) run the following command. This uses an example from Frederick Douglas's 4th of July speech and the theme of `freedom` which is provided with each of the additional text generations
+
+```
+python3 src/guided_recursive_conditional_samples.py --top_k 40 --model_name 1558M --write_file 4th_of_july_equality --seedling "What, to the American slave, is your Fourth of July?" --seed 2 --theme freedom --length 50```
+
 For basic information, see our [model card](./model_card.md).
 
 ### Some caveats
